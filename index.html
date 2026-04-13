@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>名古屋高山旅遊手冊 V5</title>
+    <title>名古屋高山導航手冊 V6</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -15,79 +15,106 @@
         .tab-content { display: none; }
         .active { display: block; }
         .nav-item.active-nav { color: #8C6A5D; border-top: 2px solid #8C6A5D; }
+        .map-link { color: #8C6A5D; text-decoration: underline; font-weight: 500; cursor: pointer; }
     </style>
 </head>
 <body class="pb-24">
 
     <div class="earth-brown p-6 text-white text-center shadow-md">
         <h1 class="text-xl font-bold tracking-widest uppercase">Nagoya & Takayama</h1>
-        <p class="text-xs opacity-80 mt-1 italic">2026.05.19 - 05.23 完整對齊版</p>
+        <p class="text-xs opacity-80 mt-1 italic">2026.05.19 - 05.23 導航記帳版</p>
     </div>
 
     <div id="content-itinerary" class="tab-content active p-4 max-w-md mx-auto">
-        <h2 class="font-bold mb-3 text-[#626F47] border-l-4 border-[#626F47] pl-2">5/19 (週二) 抵達</h2>
+        
+        <div class="mb-6">
+            <a href="https://www.google.com/maps/@36.1405634,137.2515757,16z?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="flex items-center justify-center gap-2 bg-white border-2 border-[#8C6A5D] text-[#8C6A5D] w-full py-3 rounded-2xl font-bold shadow-sm active:scale-95 transition-all">
+                <i class="fa-solid fa-map-location-dot"></i> 打開我的有趣地點清單
+            </a>
+        </div>
+
+        <h2 class="font-bold mb-3 text-[#626F47] border-l-4 border-[#626F47] pl-2">5/19 (週二) 抵達名古屋</h2>
         <div class="card">
             <div class="space-y-3">
-                <div class="flex items-start"><span class="time-tag">17:15</span><span>桃園機場 CI150 起飛</span></div>
+                <div class="flex items-start"><span class="time-tag">17:15</span><span>桃園機場 T2 (CI150)</span></div>
                 <div class="flex items-start"><span class="time-tag">21:05</span><span>抵達名古屋 T1</span></div>
+                <div class="flex items-start font-bold text-[#8C6A5D]"><span class="time-tag">23:30</span><span class="map-link" onclick="window.open('https://www.google.com/maps/search/Mont+Blanc+Hotel+Nagoya')">入住 Mont Blanc Hotel</span></div>
             </div>
         </div>
+
+        <h2 class="font-bold mb-3 text-[#626F47] border-l-4 border-[#626F47] pl-2">5/20 (週三) 古川 & 高山老街</h2>
+        <div class="card">
+            <div class="space-y-3">
+                <div class="flex items-start"><span class="time-tag">08:00</span><span>JR 名站買套票</span></div>
+                <div class="flex items-start"><span class="time-tag">11:15</span><span class="map-link" onclick="window.open('https://www.google.com/maps/search/Hotel+Amanek+Takayama')">Hotel Amanek 寄行李</span></div>
+                <div class="flex items-start"><span class="time-tag">11:39</span><span class="map-link" onclick="window.open('https://www.google.com/maps/search/Hida+Furukawa+Station')">飛驒古川巡禮</span></div>
+                <div class="flex items-start font-bold text-[#8C6A5D]"><span class="time-tag">18:30</span><span class="map-link" onclick="window.open('https://www.google.com/maps/search/高山+京屋')">晚餐：京屋</span></div>
+            </div>
         </div>
+
+        <h2 class="font-bold mb-3 text-[#626F47] border-l-4 border-[#626F47] pl-2">5/21 (週四) 上高地</h2>
+        <div class="card">
+            <div class="space-y-3">
+                <div class="flex items-start"><span class="time-tag">07:40</span><span>搭巴士 ➔ <span class="map-link" onclick="window.open('https://www.google.com/maps/search/Kamikochi')">上高地</span></span></div>
+                <div class="flex items-start font-bold text-[#8C6A5D]"><span class="time-tag">18:15</span><span class="map-link" onclick="window.open('https://www.google.com/maps/search/味蔵天國')">味藏天國燒肉</span></div>
+            </div>
+        </div>
+
+        <h2 class="font-bold mb-3 text-[#626F47] border-l-4 border-[#626F47] pl-2">5/22 (週五) 名古屋購物</h2>
+        <div class="card">
+            <div class="space-y-3">
+                <div class="flex items-start"><span class="time-tag">14:00</span><span class="map-link" onclick="window.open('https://www.google.com/maps/search/Oasis+21')">榮商圈 (綠洲 21)</span></div>
+                <div class="flex items-start font-bold text-[#8C6A5D]"><span class="time-tag">17:30</span><span class="map-link" onclick="window.open('https://www.google.com/maps/search/AEON+MALL+Nagoya+Noritake+Garden')">AEON MALL 巨大書牆</span></div>
+            </div>
+        </div>
+    </div>
 
     <div id="content-calc" class="tab-content p-4 max-w-md mx-auto">
         <div class="flex justify-between items-center mb-4">
             <h2 class="font-bold text-[#626F47] border-l-4 border-[#626F47] pl-2">消費記帳</h2>
-            <button onclick="clearAllRecords()" class="text-xs text-red-400 font-bold uppercase tracking-tighter">清空所有紀錄</button>
+            <button onclick="clearAllRecords()" class="text-[10px] text-red-400 font-bold uppercase">清空紀錄</button>
         </div>
-
         <div class="card earth-green text-white text-center py-6">
-            <p class="text-xs opacity-80 mb-1">今日總支出 (台幣)</p>
-            <p class="text-4xl font-bold">NT$ <span id="totalTWD">0</span></p>
-            <p class="text-xs mt-2 italic">累積日圓：￥<span id="totalJPY">0</span></p>
+            <p class="text-xs opacity-80 mb-1 text-white">總支出 (台幣計)</p>
+            <p class="text-4xl font-bold text-white font-mono">NT$ <span id="totalTWD">0</span></p>
+            <p class="text-xs mt-2 italic text-white opacity-80">累積日圓：￥<span id="totalJPY">0</span></p>
         </div>
-
         <div class="card bg-gray-50 border-dashed border-2 border-gray-200">
-            <input type="text" id="itemName" placeholder="花費項目 (如：藥妝)" class="w-full bg-transparent border-b border-gray-300 mb-4 p-2 text-sm">
+            <input type="text" id="itemName" placeholder="項目 (如：藥妝)" class="w-full bg-transparent border-b border-gray-300 mb-4 p-2 text-sm">
             <div class="flex gap-2">
                 <input type="number" id="itemPrice" placeholder="日圓金額" class="w-2/3 bg-transparent border-b border-gray-300 p-2 text-sm">
-                <button onclick="addRecord()" class="w-1/3 earth-brown text-white py-2 rounded-xl font-bold text-sm">記一筆</button>
+                <button onclick="addRecord()" class="w-1/3 earth-brown text-white py-2 rounded-xl font-bold text-sm shadow-sm active:scale-95 transition-all">記一筆</button>
             </div>
         </div>
-
-        <div id="recordList" class="space-y-2 mt-4">
-            </div>
+        <div id="recordList" class="space-y-2 mt-4 pb-10"></div>
     </div>
 
-    <div class="fixed bottom-0 w-full bg-white border-t flex justify-around py-4 shadow-2xl">
+    <div class="fixed bottom-0 w-full bg-white border-t flex justify-around py-4 shadow-2xl z-50">
         <button onclick="showTab('itinerary', this)" class="nav-item active-nav text-center flex-1">
             <i class="fa-solid fa-calendar-day text-xl"></i><p class="text-[10px] mt-1 font-bold">詳細行程</p>
+        </button>
+        <button onclick="window.open('https://www.google.com/maps/search/有趣的地方+near+me')" class="text-center flex-1 text-gray-400">
+            <i class="fa-solid fa-compass text-xl"></i><p class="text-[10px] mt-1 font-bold">搜尋附近</p>
         </button>
         <button onclick="showTab('calc', this)" class="nav-item text-center flex-1 text-gray-400">
             <i class="fa-solid fa-wallet text-xl"></i><p class="text-[10px] mt-1 font-bold">消費記帳</p>
         </button>
         <button onclick="window.location.href='https://translate.google.com/?sl=ja&tl=zh-TW'" class="text-center flex-1 text-gray-400">
-            <i class="fa-solid fa-language text-xl"></i><p class="text-[10px] mt-1 font-bold">翻譯工具</p>
+            <i class="fa-solid fa-language text-xl"></i><p class="text-[10px] mt-1 font-bold">翻譯</p>
         </button>
     </div>
 
     <script>
         let records = JSON.parse(localStorage.getItem('travel_records')) || [];
         const rate = 0.21;
-
-        // 初始化頁面
-        window.onload = function() {
-            renderRecords();
-        };
-
+        window.onload = function() { renderRecords(); };
         function showTab(tabName, btn) {
             document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
             document.getElementById('content-' + tabName).classList.add('active');
-            document.querySelectorAll('.nav-item').forEach(el => {
-                el.classList.remove('active-nav', 'text-[#8C6A5D]'); el.classList.add('text-gray-400');
-            });
+            document.querySelectorAll('.nav-item').forEach(el => { el.classList.remove('active-nav', 'text-[#8C6A5D]'); el.classList.add('text-gray-400'); });
             btn.classList.add('active-nav', 'text-[#8C6A5D]'); btn.classList.remove('text-gray-400');
+            window.scrollTo(0, 0);
         }
-
         function addRecord() {
             const name = document.getElementById('itemName').value;
             const price = parseFloat(document.getElementById('itemPrice').value);
@@ -96,42 +123,24 @@
                 records.push(newRecord);
                 localStorage.setItem('travel_records', JSON.stringify(records));
                 renderRecords();
-                document.getElementById('itemName').value = '';
-                document.getElementById('itemPrice').value = '';
+                document.getElementById('itemName').value = ''; document.getElementById('itemPrice').value = '';
             }
         }
-
         function renderRecords() {
             const list = document.getElementById('recordList');
             list.innerHTML = '';
             let totalJPY = 0;
-            
-            // 倒序顯示，最新在上面
             [...records].reverse().forEach(record => {
                 totalJPY += record.price;
                 const item = document.createElement('div');
                 item.className = 'flex justify-between items-center bg-white p-4 rounded-xl shadow-sm border-r-4 border-[#BCAC9B] mb-2';
-                item.innerHTML = `
-                    <span class="text-sm font-medium">${record.name}</span>
-                    <div class="text-right">
-                        <p class="text-sm font-bold text-[#8C6A5D]">￥${record.price.toLocaleString()}</p>
-                        <p class="text-[10px] text-gray-400">≈ NT$ ${Math.round(record.price * rate)}</p>
-                    </div>
-                `;
+                item.innerHTML = `<div><p class="text-sm font-medium">${record.name}</p></div><div class="text-right"><p class="text-sm font-bold text-[#8C6A5D]">￥${record.price.toLocaleString()}</p><p class="text-[10px] text-gray-400">≈ NT$ ${Math.round(record.price * rate)}</p></div>`;
                 list.appendChild(item);
             });
-
             document.getElementById('totalJPY').innerText = totalJPY.toLocaleString();
             document.getElementById('totalTWD').innerText = Math.round(totalJPY * rate).toLocaleString();
         }
-
-        function clearAllRecords() {
-            if (confirm('確定要清空所有記帳紀錄嗎？')) {
-                records = [];
-                localStorage.removeItem('travel_records');
-                renderRecords();
-            }
-        }
+        function clearAllRecords() { if (confirm('確定要清空所有紀錄嗎？')) { records = []; localStorage.removeItem('travel_records'); renderRecords(); } }
     </script>
 </body>
 </html>
